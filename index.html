@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<style>
+html, body {
+    background: #000;
+}
+</style>
+<script src="js/oppai.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    //Oppai._debug = true;
+    var left = {
+            vertex: [375, 612],
+            round_coords: [[366, 546], [426,513], [498,531], [513,600], [489, 678], [411,690], [365,684], [345,624] ]
+        },
+        right = {
+            vertex: [642, 567],
+            round_coords:   [[540, 522], [621,495], [696,510], [720,585], [663,639], [621,669], [546,648], [513,600]]
+        };
+    var oppai = new Oppai("#viewer", "img/030.jpg", { enableTouch: true }, left, right);
+
+    oppai.load(function() {
+        window.pai = oppai;
+    });
+}, false);
+</script>
+</head>
+<body>
+<canvas id="viewer"></canvas>
+</body>
+</html>
